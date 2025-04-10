@@ -10,12 +10,6 @@ sample_sheet: "test_data/test_sample_sheet.csv"
 outdir: "test_out"
 uce_dir: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/workflow/Phylogeny_Reconstruction_using_UCEs/test_data/uce"
 
-## Settings
-# minimum number of samples in a gene tree required to build a tree
-# since astral4 can summarize gene trees with missing taxa
-# Can't be lower than 4
-minimum_sample_n: 4
-
 ## Resources and parallel configs
 cpus: 40
 cpus_per_nhmmer: 10
