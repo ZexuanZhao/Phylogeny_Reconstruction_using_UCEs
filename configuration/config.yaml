@@ -1,0 +1,34 @@
+## A project name for naming summary files
+project: "Figwasp_BUSCO_phylogeny"
+
+## Input files
+##sample_sheet: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/workflow/Phylogeny_Reconstruction_using_BUSCOs/genomeAssemblies/figwasp_sample_sheet.csv"
+##outdir: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/experiments/Figwasp_BUSCO_phylogeny"
+
+## Un-comment this for test
+sample_sheet: "test_data/test_sample_sheet.csv"
+outdir: "test_out"
+uce_dir: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/workflow/Phylogeny_Reconstruction_using_UCEs/test_data/uce"
+
+## Settings
+# minimum number of samples in a gene tree required to build a tree
+# since astral4 can summarize gene trees with missing taxa
+# Can't be lower than 4
+minimum_sample_n: 4
+
+## Resources and parallel configs
+cpus: 40
+cpus_per_nhmmer: 10
+n_parallel_gblocks: 40
+n_parallel_mafft: 40
+n_parallel_iqtree: 40
+astral: "astral4"
+
+## Hmm hits filtering parameters
+window_size: "100000"
+ratio_cutoff: "50"
+min_score: "200"
+min_size: "200"
+
+## Sequences filtering parameters
+p_Ns: "0.5"

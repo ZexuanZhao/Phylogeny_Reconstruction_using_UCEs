@@ -1,0 +1,8 @@
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - r-tidyverse
+ - bioconductor-genomicranges
+ - bioconductor-biostrings
+ - r-r.devices
