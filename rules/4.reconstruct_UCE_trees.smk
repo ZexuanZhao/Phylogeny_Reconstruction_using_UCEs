@@ -40,8 +40,6 @@ rule gblocks:
         script = "scripts/Gblocks.py",
         indir=os.path.join(config["outdir"],"hmm_hits_filtered_merged_aligned"),
         outdir=os.path.join(config["outdir"],"hmm_hits_filtered_merged_aligned_gblocks"),
-        n_parallel_gblocks=config["n_parallel_gblocks"],
-        cpu_per_job = int(int(config["cpus"])/int(config["n_parallel_gblocks"]))
     log:
         os.path.join(config["outdir"],"logs","gblocks.log")
     threads:
@@ -49,7 +47,7 @@ rule gblocks:
     shell:
         """
             find {params.indir} -type f -name '*_aligned.fasta' -print0 | \
-                xargs -0 -P {params.n_parallel_gblocks} \
+                xargs -0 -P {threads} \
                     -I {{}} \
                     bash -c \
                         'python scripts/Gblocks.py "{{}}"' \
