@@ -1,14 +1,15 @@
 ## A project name for naming summary files
-project: "Figwasp_BUSCO_phylogeny"
+project: ""
 
 ## Input files
-##sample_sheet: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/workflow/Phylogeny_Reconstruction_using_BUSCOs/genomeAssemblies/figwasp_sample_sheet.csv"
-##outdir: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/experiments/Figwasp_BUSCO_phylogeny"
+sample_sheet: ""
+outdir: ""
+uce_dir: ""
 
 ## Un-comment this for test
-sample_sheet: "test_data/test_sample_sheet.csv"
-outdir: "test_out"
-uce_dir: "/home/zexuanzhao/projects/Pegoscapus_phylogeny/workflow/Phylogeny_Reconstruction_using_UCEs/test_data/uce"
+##sample_sheet: "test_data/test_sample_sheet.csv"
+##outdir: "test_out"
+##uce_dir: "test_data/uce"
 
 ## Resources and parallel configs
 cpus: 40
