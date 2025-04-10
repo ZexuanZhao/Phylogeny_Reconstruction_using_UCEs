@@ -14,7 +14,6 @@ uce_dir: ""
 ## Resources and parallel configs
 cpus: 40
 cpus_per_nhmmer: 10
-n_parallel_gblocks: 40
 n_parallel_mafft: 40
 n_parallel_iqtree: 40
 astral: "astral4"
