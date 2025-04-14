@@ -11,6 +11,7 @@ rule astral:
         config["cpus"]
     shell:
         """
+            chmod +x bin/{params.astral}
             bin/{params.astral} \
                 -t {threads} \
                 -o {output} \
