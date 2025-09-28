@@ -58,7 +58,7 @@ p1 <- hits_txt %>%
   mutate(idx = ifelse(idx == 1, "first", "second")) %>%
   select(locus, idx, eval) %>%
   pivot_wider(names_from = idx, values_from = eval) %>%
-  mutate(ratio = first/second) %>%
+  mutate(ratio = ifelse(second !=0, first/second, 1)) %>%
   mutate(ratio = -log10(ratio)) %>%
   ggplot(aes(x = ratio)) +
   geom_histogram(bins = 100) +
